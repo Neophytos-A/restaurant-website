@@ -1,0 +1,396 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* NAVBAR */
+
+@media (max-width: 768px) {
+  .navbar-left,
+  .navbar-right,
+  .contact {
+    display: none;
+  }
+
+  .header {
+    justify-content: center;
+  }
+}
+
+.logo {
+  font-size: 2rem;
+  white-space: nowrap;
+  text-align: center;
+  padding: 1rem;
+  font-family: "Cinzel", serif;
+}
+
+.olive-color {
+  color: #6b8e23;
+  position: relative;
+  top: -10px;
+}
+
+.and-color {
+  color: #bbb09a;
+}
+
+.oregano-color {
+  color: #7a8f63;
+  position: relative;
+  top: 10px;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  padding: 2rem;
+  background-color: #f5f1e8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  border-bottom: 5px solid #c76b3c;
+}
+
+.navbar-left {
+  display: flex;
+  gap: 2rem;
+  padding: 0;
+}
+
+.navbar-right {
+  display: flex;
+  gap: 2rem;
+  padding: 0;
+}
+
+nav a {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+  color: #6b8e23;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: 0.3s ease;
+}
+
+nav a:hover {
+  color: #556b2f;
+  transform: scale(1.2);
+}
+
+nav a.active {
+  color: #c76b3c;
+  border-bottom: 3px solid #c76b3c;
+}
+
+.contact {
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+  background-color: #5a7a1a;
+  border: 2px solid #3d5412;
+  border-radius: 5px;
+  padding: 1rem;
+  transition: 0.3s ease;
+}
+
+.contact:hover {
+  color: white;
+  background-color: #3d5412;
+  border: 2px solid transparent;
+}
+
+nav a.active {
+  color: #c76b3c;
+  border-bottom: 3px solid #c76b3c;
+}
+
+/* HERO SECTION */
+
+.hero {
+  height: 100vh;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("Images/Cyprus-cuisine.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2.5rem;
+}
+
+.hero-content h2 {
+  font-size: 1.8rem;
+  font-family: "Cinzel", serif;
+  color: #ffffff;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  font-family: "Open Sans", sans-serif;
+  color: #ffffff;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  background: #c76b3c;
+  color: white;
+  text-decoration: none;
+  border: 2px solid #a34f28;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #a34f28;
+  border: 2px solid transparent;
+}
+
+/* DESSERT SECTION */
+
+.dessert-section {
+  background-color: #a34f28;
+  padding: 5rem 4rem;
+}
+
+.dessert-section h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-family: "Cinzel", serif;
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+
+.dessert-images {
+  display: flex;
+  gap: 2rem;
+}
+
+.dessert-images img {
+  flex: 1;
+  min-width: 0; /* prevents flex overflow */
+  width: 0; /* let flex control the width */
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+@media (max-width: 640px) {
+  .dessert-images {
+    flex-direction: column;
+  }
+  .dessert-images img {
+    width: 100%;
+    height: 260px;
+  }
+}
+
+/* WINE SECTION */
+
+.wine-section {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("Images/traditional-wine.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2.5rem;
+  flex-direction: column;
+}
+
+.wine-section h2 {
+  font-size: 1.8rem;
+  font-family: "Cinzel", serif;
+  color: #ffffff;
+}
+
+.wine-section p {
+  font-size: 1.5rem;
+  font-family: "Open Sans", sans-serif;
+  color: #ffffff;
+}
+
+/* FOOTER */
+
+.footer {
+  background-color: #a34f28;
+  padding: 3rem 2rem;
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  border-top: 5px solid #f5f1e8;
+}
+
+.footer-about {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.footer-about h3 {
+  font-size: 1.5rem;
+  font-family: "Cinzel", serif;
+  color: #ffffff;
+}
+
+.footer-about p {
+  font-size: 1.2rem;
+  font-family: "Open Sans", sans-serif;
+  color: #ffffff;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  letter-spacing: 0.1rem;
+  line-height: 1.8;
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+}
+
+.footer-container h3 {
+  font-size: 1.5rem;
+  font-family: "Cinzel", serif;
+  text-align: left;
+}
+
+.footer-container p {
+  font-size: 1.2rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+.days,
+.dash {
+  color: black;
+  font-weight: 600;
+}
+
+.footer-socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.1rem;
+}
+
+.footer-socials h3 {
+  font-size: 1.5rem;
+  font-family: "Cinzel", serif;
+  padding-right: 2rem;
+  color: #ffffff;
+}
+
+.socials-img {
+  display: inline-block;
+  width: 1.5rem;
+  height: auto;
+  color: #ffffff;
+}
+
+.social-logos {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.arrow {
+  color: #ffffff;
+  font-size: 2rem;
+  padding-right: 2rem;
+  animation: arrowPulse 2s infinite ease-in-out;
+}
+
+@keyframes arrowPulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.social-logos a {
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  padding: 0.4rem;
+  box-shadow:
+    inset 0 0 10px #ffffff,
+    0 0 10px #ffffff;
+  transition: 0.3s ease;
+}
+
+.social-logos a:hover {
+  transform: scale(1.2) translateY(-10px);
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.contact-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.work-btn {
+  display: inline-block;
+  font-family: "Open Sans", sans-serif;
+  color: #ffffff;
+  padding: 1rem 2rem;
+
+  background-color: transparent;
+  color: white;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+
+  transition: 0.3s ease;
+}
+
+.work-btn:hover {
+  color: black;
+  background-color: #ffffff;
+  border-color: transparent;
+}
