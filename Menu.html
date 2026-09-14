@@ -1,9 +1,13 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="menu.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore the Olive & Oregano menu featuring traditional Cypriot meze, main dishes, desserts, breakfast, drinks, and more."
+    />
+    <title>Menu | Olive & Oregano</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap"
       rel="stylesheet"
@@ -18,73 +22,69 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Menu</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="menu.css" />
   </head>
   <body>
     <!-- NAVBAR -->
-
     <header class="header">
-      <nav class="navbar-left">
-        <a href="#">HOME</a>
-        <a href="#" class="active">MENU</a>
-        <a href="#">CONTACT</a>
+      <nav class="navbar" aria-label="Main navigation">
+        <div class="navbar-left">
+          <a href="index.html">HOME</a>
+          <a href="menu.html" aria-current="page">MENU</a>
+          <a href="#contact">CONTACT</a>
+        </div>
+
+        <a href="index.html" class="logo">
+          <span class="olive-color">Olive</span
+          ><span class="and-color"> & </span>
+          <span class="oregano-color">Oregano</span>
+        </a>
+
+        <div class="navbar-right">
+          <a href="#">GALLERY</a>
+          <a href="#">ABOUT US</a>
+        </div>
+
+        <a href="#" class="contact">BOOK A TABLE</a>
       </nav>
-
-      <h1 class="logo">
-        <span class="olive-color">Olive</span><span class="and-color"> & </span>
-        <span class="oregano-color">Oregano</span>
-      </h1>
-
-      <nav class="navbar-right">
-        <a href="#">GALLERY</a>
-        <a href="#">ABOUT US</a>
-      </nav>
-
-      <a href="#" class="contact">BOOK A TABLE</a>
     </header>
     <main>
       <!-- ANNOUNCEMENT BAR -->
-
-      <section class="announcement-section">
+      <div class="announcement-section">
         <div class="announcement-bar">
           <p>🍽️ 20% OFF on all Meze every Tuesday! 🍽️</p>
         </div>
-      </section>
+      </div>
 
       <!-- MENU BAR -->
-
       <section class="menu-bar-section">
         <div class="menu-bar">
-          <h2>OUR MENU</h2>
+          <h1>OUR MENU</h1>
           <p>Traditional Cypriot flavours · Made fresh daily</p>
         </div>
       </section>
 
       <!-- MENU CATEGORY BAR -->
-
       <section class="menu-category-section">
-        <div class="menu-category-bar">
-          <a href="#" class="active">MEZE</a>
-          <a href="#">BREAKFAST</a>
-          <a href="#">LUNCH</a>
-          <a href="#">DINER</a>
-          <a href="#">DESSERTS</a>
-          <a href="#">DRINKS</a>
-          <a href="#">KIDS</a>
+        <div class="menu-category-nav">
+          <a href="#meze" class="active">MEZE</a>
+          <a href="#breakfast">BREAKFAST</a>
+          <a href="#lunch&dinner">LUNCH & DINNER</a>
+          <a href="#kids">KIDS</a>
+          <a href="#drinks-spirits">DRINKS & SPIRITS</a>
         </div>
       </section>
 
       <!-- MEZE SECTION -->
-      <section class="meze-section">
-        <div class="meze-header">
+      <section class="menu-section" id="meze">
+        <div class="menu-section-header">
           <div class="icon-section">
-            <i class="fa-solid fa-utensils"></i>
+            <i class="fa-solid fa-utensils" aria-hidden="true"></i>
           </div>
           <div class="text-section">
             <h2>
-              MEZE (Recommended) - <span class="price">€20 per person</span>
+              MEZE (Recommended) - <span class="price">€25 per person</span>
             </h2>
             <p>
               A traditional assortment of small Cypriot dishes made for sharing
@@ -95,62 +95,64 @@
         <span class="divider"></span>
 
         <!-- STARTERS -->
-
         <h3 class="subsection-title">STARTERS</h3>
-        <div class="meze">
-          <div class="meze-grid">
+        <div class="menu-items">
+          <div class="menu-grid">
             <div class="card">
-              <img src="Images/Cyprus-Pitta-bread.webp" alt="Pitta Bread" />
+              <img src="images/cyprus-Pitta-bread.webp" alt="Pitta Bread" />
               <div class="card-body">
                 <h4 class="card-name">Pitta Bread</h4>
                 <p class="card-desc">
                   Traditional Cypriot flatbread served with various dips.
                 </p>
-                <div class="card-footer">
-                  <span class="tag veg">VEG</span>
-                </div>
+              </div>
+              <div class="card-footer">
+                <span class="tag veg">VEG</span>
               </div>
             </div>
+
             <div class="card">
-              <img src="Images/tahini.jpg" alt="Tahini" />
+              <img src="images/tahini.jpg" alt="Tahini" />
               <div class="card-body">
                 <h4 class="card-name">Tahini</h4>
                 <p class="card-desc">
                   Smooth sesame paste used as a base for various dips.
                 </p>
-                <div class="card-footer">
-                  <span class="tag veg">VEG</span>
-                </div>
+              </div>
+              <div class="card-footer">
+                <span class="tag veg">VEG</span>
               </div>
             </div>
+
             <div class="card">
-              <img src="Images/Cyprus-taramaslata.jpg" alt="Taramosalata" />
+              <img src="images/cyprus-taramaslata.jpg" alt="Taramosalata" />
               <div class="card-body">
                 <h4 class="card-name">Taramosalata</h4>
                 <p class="card-desc">
                   Traditional Cypriot fish roe dip with lemon and olive oil.
                 </p>
-                <div class="card-footer">
-                  <span class="tag fish">FISH</span>
-                </div>
+              </div>
+              <div class="card-footer">
+                <span class="tag fish">FISH</span>
               </div>
             </div>
+
             <div class="card">
-              <img src="Images/tzatziki.jpg" alt="Tzatziki" />
+              <img src="images/tzatziki.jpg" alt="Tzatziki" />
               <div class="card-body">
                 <h4 class="card-name">Tzatziki</h4>
                 <p class="card-desc">
                   Refreshment yogurt dip with cucumber and garlic.
                 </p>
-                <div class="card-footer">
-                  <span class="tag veg">VEG</span>
-                </div>
+              </div>
+              <div class="card-footer">
+                <span class="tag veg">VEG</span>
               </div>
             </div>
 
             <div class="card">
               <img
-                src="Images/village-salad-fresh-cut.jpg"
+                src="images/village-salad-fresh-cut.jpg"
                 alt="Traditional greek Salad"
               />
               <div class="card-body">
@@ -158,150 +160,158 @@
                 <p class="card-desc">
                   Fresh salad with tomatoes, cucumbers, olives, and feta cheese.
                 </p>
-                <div class="card-footer">
-                  <span class="tag veg">VEG</span>
-                </div>
+              </div>
+              <div class="card-footer">
+                <span class="tag veg">VEG</span>
               </div>
             </div>
+
             <div class="card">
-              <img src="Images/green-olives.jpg" alt="Green Olives" />
+              <img src="images/green-olives.jpg" alt="Green Olives" />
               <div class="card-body">
                 <h4 class="card-name">Green Olives</h4>
                 <p class="card-desc">
                   Marinated green olives with herbs and spices.
                 </p>
-                <div class="card-footer">
-                  <span class="tag veg">VEG</span>
-                </div>
+              </div>
+              <div class="card-footer">
+                <span class="tag veg">VEG</span>
               </div>
             </div>
+
             <div class="card">
-              <img src="Images/halloumi-cyprus.jpg" alt="Halloumi Cheese" />
+              <img src="images/halloumi-cyprus.jpg" alt="Halloumi Cheese" />
               <div class="card-body">
                 <h4 class="card-name">Halloumi Cheese</h4>
                 <p class="card-desc">
                   Traditional Cypriot cheese with a distinctive taste and
                   texture.
                 </p>
-                <div class="card-footer">
-                  <span class="tag veg">VEG</span>
-                </div>
+              </div>
+              <div class="card-footer">
+                <span class="tag veg">VEG</span>
               </div>
             </div>
+
             <div class="card">
-              <img src="Images/loukaniko.jpg" alt="Loukaniko" />
+              <img src="images/loukaniko.jpg" alt="Loukaniko" />
               <div class="card-body">
                 <h4 class="card-name">Loukaniko (Cypriot Sausage)</h4>
                 <p class="card-desc">
                   Traditional Cypriot sausage with a distinctive taste and
                   texture.
                 </p>
-                <div class="card-footer">
-                  <span class="tag meat">MEAT</span>
-                </div>
+              </div>
+              <div class="card-footer">
+                <span class="tag meat">MEAT</span>
               </div>
             </div>
           </div>
         </div>
 
         <!-- MAIN DISHES -->
-
         <h3 class="subsection-title">MAIN DISHES</h3>
-        <div class="meze">
-          <div class="meze-grid">
+        <div class="menu-items">
+          <div class="menu-grid">
             <div class="card">
-              <img src="Images/sheftalia-main.jpg" alt="Sheftalia" />
+              <img src="images/sheftalia-main.jpg" alt="Sheftalia" />
               <div class="card-body">
                 <h4 class="card-name">Sheftalia</h4>
                 <p class="card-desc">
                   Traditional Cypriot dish made with minced meat and vegetables.
                 </p>
-                <div class="card-footer">
-                  <span class="tag meat">MEAT</span>
-                </div>
+              </div>
+              <div class="card-footer">
+                <span class="tag meat">MEAT</span>
               </div>
             </div>
+
             <div class="card">
-              <img src="Images/Souvlaki.webp" alt="Souvlaki" />
+              <img src="images/souvlaki.webp" alt="Souvlaki" />
               <div class="card-body">
                 <h4 class="card-name">Pork Souvlaki</h4>
                 <p class="card-desc">
                   Traditional Cypriot dish made with grilled pork and
                   vegetables.
                 </p>
-                <div class="card-footer">
-                  <span class="tag meat">MEAT</span>
-                </div>
+              </div>
+              <div class="card-footer">
+                <span class="tag meat">MEAT</span>
               </div>
             </div>
+
             <div class="card">
-              <img src="Images/koupepia.jpg" alt="Koupepia" />
+              <img src="images/koupepia.jpg" alt="Koupepia" />
               <div class="card-body">
                 <h4 class="card-name">Koupepia</h4>
                 <p class="card-desc">
                   Traditional Cypriot dish made with minced meat and rice
                   wrapped in grape leaves.
                 </p>
-                <div class="card-footer">
-                  <span class="tag meat">MEAT</span>
-                </div>
+              </div>
+              <div class="card-footer">
+                <span class="tag meat">MEAT</span>
               </div>
             </div>
+
             <div class="card">
-              <img src="Images/ofto-kleftiko.jpg" alt="Kleftiko" />
+              <img src="images/ofto-kleftiko.jpg" alt="Kleftiko" />
               <div class="card-body">
                 <h4 class="card-name">Kleftiko</h4>
                 <p class="card-desc">
                   Traditional Cypriot dish made with slow-cooked lamb and
                   vegetables.
                 </p>
-                <div class="card-footer">
-                  <span class="tag meat">MEAT</span>
-                </div>
+              </div>
+              <div class="card-footer">
+                <span class="tag meat">MEAT</span>
               </div>
             </div>
 
             <div class="card">
-              <img src="Images/fries.jpg" alt="Fries" />
+              <img src="images/fries.jpg" alt="Fries" />
               <div class="card-body">
                 <h4 class="card-name">Cypriot Fries</h4>
                 <p class="card-desc">
                   Crispy golden fries served with a side of ketchup or mayo.
                 </p>
-                <div class="card-footer">
-                  <span class="tag veg">VEG</span>
-                </div>
+              </div>
+              <div class="card-footer">
+                <span class="tag veg">VEG</span>
               </div>
             </div>
+
             <div class="card">
-              <img src="Images/Cypriot-Pastitsio.jpg" alt="Pastitsio" />
+              <img src="images/cypriot-Pastitsio.jpg" alt="Pastitsio" />
               <div class="card-body">
                 <h4 class="card-name">Pastitsio</h4>
                 <p class="card-desc">
                   Traditional Cypriot dish made with layers of pasta and pork
                   meat.
                 </p>
-                <div class="card-footer">
-                  <span class="tag meat">MEAT</span>
-                </div>
+              </div>
+              <div class="card-footer">
+                <span class="tag meat">MEAT</span>
               </div>
             </div>
+
             <div class="card">
-              <img src="Images/Pourkouri.webp " alt="Pilafi" />
+              <img src="images/pourkouri.webp" alt="Pilafi" />
               <div class="card-body">
                 <h4 class="card-name">Pilafi</h4>
                 <p class="card-desc">
                   Traditional Cypriot side dish made with tomato, rice, and
                   herbs.
                 </p>
-                <div class="card-footer">
-                  <span class="tag veg">VEG</span>
-                </div>
+              </div>
+              <div class="card-footer">
+                <span class="tag veg">VEG</span>
               </div>
             </div>
+
             <div class="card">
               <img
-                src="Images/zucchini with eggs.jpg"
+                src="images/zucchini-with-eggs.jpg"
                 alt="Zucchini with Eggs"
               />
               <div class="card-body">
@@ -309,84 +319,651 @@
                 <p class="card-desc">
                   Traditional Cypriot dish made with zucchini and eggs.
                 </p>
-                <div class="card-footer">
-                  <span class="tag veg">VEG</span>
-                </div>
+              </div>
+              <div class="card-footer">
+                <span class="tag veg">VEG</span>
               </div>
             </div>
           </div>
         </div>
 
         <!-- DESSERTS-->
-        <h3 class="subsection-title">
-          DESSERTS <span class="subtitle">(YOU GET ONE OF THOSE)</span>
-        </h3>
-        <div class="meze">
-          <div class="meze-grid">
+        <h3 class="subsection-title">DESSERTS</h3>
+        <span class="subtitle"
+          >ONE DESSERT INCLUDED WITH MEZE · ALSO AVAILABLE INDIVIDUALLY</span
+        >
+        <div class="menu-items">
+          <div class="menu-grid">
             <div class="card">
-              <img src="Images/Cyprus-dessert.jpg" alt="Galaktoboureko" />
+              <img src="images/cyprus-dessert.jpg" alt="Galaktoboureko" />
               <div class="card-body">
                 <h4 class="card-name">Galaktoboureko</h4>
                 <p class="card-desc">
                   Traditional Cypriot dessert made with milk, sugar, and sesame
                   seeds.
                 </p>
-                <div class="card-footer">
-                  <span class="tag veg">VEG</span>
-                </div>
+              </div>
+              <div class="card-footer">
+                <span class="item-price">€6.00</span>
+                <span class="tag veg">VEG</span>
               </div>
             </div>
+
             <div class="card">
-              <img src="Images/Daktila.jpg" alt="Daktila" />
+              <img src="images/daktila.jpg" alt="Daktila" />
               <div class="card-body">
                 <h4 class="card-name">Daktila</h4>
                 <p class="card-desc">
                   Traditional Cypriot dessert made with filling of nuts and
                   syrup, shaped like fingers.
                 </p>
-                <div class="card-footer">
-                  <span class="tag veg">VEG</span>
-                </div>
+              </div>
+              <div class="card-footer">
+                <span class="item-price">€5.50</span>
+                <span class="tag veg">VEG</span>
               </div>
             </div>
+
             <div class="card">
-              <img src="Images/baklava.jpg" alt="Baklava" />
+              <img src="images/baklava.jpg" alt="Baklava" />
               <div class="card-body">
                 <h4 class="card-name">Baklava</h4>
                 <p class="card-desc">
                   Traditional Cypriot dessert made with layers of phyllo dough,
                   nuts, and syrup.
                 </p>
-                <div class="card-footer">
-                  <span class="tag veg">VEG</span>
-                </div>
+              </div>
+              <div class="card-footer">
+                <span class="item-price">€6.00</span>
+                <span class="tag veg">VEG</span>
               </div>
             </div>
+
             <div class="card">
-              <img src="Images/Kalo-Prama.jpg" alt="Kalo Prama" />
+              <img src="images/kalo-prama.jpg" alt="Kalo Prama" />
               <div class="card-body">
                 <h4 class="card-name">Kalo Prama</h4>
                 <p class="card-desc">
                   Traditional Cypriot dessert made with semolina, sugar, and
                   cinnamon.
                 </p>
-                <div class="card-footer">
-                  <span class="tag veg">VEG</span>
-                </div>
+              </div>
+              <div class="card-footer">
+                <span class="item-price">€5.50</span>
+                <span class="tag veg">VEG</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BREAKFAST -->
+      <section class="menu-section" id="breakfast">
+        <div class="menu-section-header">
+          <div class="icon-section">
+            <i class="fa-solid fa-utensils" aria-hidden="true"></i>
+          </div>
+
+          <div class="text-section">
+            <h2>BREAKFAST</h2>
+            <p>Served with cypriot coffee or fresh orange juice</p>
+          </div>
+        </div>
+
+        <span class="divider"></span>
+
+        <h3 class="subsection-title">BREAKFAST DISHES</h3>
+        <div class="menu-items">
+          <div class="menu-grid">
+            <div class="card">
+              <img
+                src="images/scrambled-eggs-with-sausage.jpg"
+                alt="Scrambled Eggs with Sausage"
+              />
+              <div class="card-body">
+                <h4 class="card-name">Scrambled Eggs with Sausage</h4>
+                <p class="card-desc">
+                  Scrambled eggs served with crispy sausage and fresh herbs.
+                </p>
+              </div>
+              <div class="card-footer">
+                <span class="item-price">€8.50</span>
+                <span class="tag meat">MEAT</span>
               </div>
             </div>
 
-            <!-- BREAKFAST -->
-            <div class="meze-header">
-              <div class="icon-section">
-                <i class="fa-solid fa-utensils"></i>
+            <div class="card">
+              <img
+                src="images/eggs-with-halloumi.jpg"
+                alt="Eggs with Halloumi"
+              />
+              <div class="card-body">
+                <h4 class="card-name">Eggs with Halloumi</h4>
+                <p class="card-desc">
+                  Fried eggs served with grilled halloumi cheese and fresh
+                  herbs.
+                </p>
               </div>
-              <div class="text-section">
-                <h2>BREAKFAST</h2>
-                <p>Enjoy traditional cypriot breakfast</p>
+              <div class="card-footer">
+                <span class="item-price">€8.00</span>
+                <span class="tag veg">VEG</span>
               </div>
             </div>
-            <span class="divider"></span>
+
+            <div class="card">
+              <img
+                src="images/zucchini-scramble-with-halloumi.jpeg"
+                alt="Zucchini Scramble with Halloumi"
+              />
+              <div class="card-body">
+                <h4 class="card-name">Zucchini Scramble with Halloumi</h4>
+                <p class="card-desc">
+                  Scrambled eggs with zucchini and grilled halloumi cheese.
+                </p>
+              </div>
+              <div class="card-footer">
+                <span class="item-price">€8.50</span>
+                <span class="tag veg">VEG</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="images/cypriot-breakfast.jpg" alt="Cypriot Breakfast" />
+              <div class="card-body">
+                <h4 class="card-name">Cypriot Breakfast</h4>
+                <p class="card-desc">
+                  Traditional Cypriot breakfast with scrambled eggs and local
+                  ingredients.
+                </p>
+              </div>
+              <div class="card-footer">
+                <span class="item-price">€9.50</span>
+                <span class="tag meat">MEAT</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LAUNCH AND DINNER -->
+      <section class="menu-section" id="lunch&dinner">
+        <div class="menu-section-header">
+          <div class="icon-section">
+            <i class="fa-solid fa-utensils" aria-hidden="true"></i>
+          </div>
+
+          <div class="text-section">
+            <h2>LAUNCH & DINNER</h2>
+            <p>Traditional Cypriot dishes served throughout the day</p>
+          </div>
+        </div>
+
+        <span class="divider"></span>
+
+        <h3 class="subsection-title">LAUNCH & DINNER DISHES</h3>
+        <div class="menu-items">
+          <div class="menu-grid">
+            <div class="card">
+              <img src="images/pork-chop.png" alt="Pork Chop" />
+
+              <div class="card-body">
+                <h4 class="card-name">Pork Chop</h4>
+                <p class="card-desc">
+                  Tender pork chop served with seasonal vegetables and our
+                  signature sauce.
+                </p>
+              </div>
+              <div class="card-footer">
+                <span class="item-price">€13.00</span>
+                <span class="tag meat">MEAT</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="images/lamb.jpg" alt="Lamb" />
+
+              <div class="card-body">
+                <h4 class="card-name">Lamb</h4>
+                <p class="card-desc">
+                  Slow-cooked lamb served with oven potatoes.
+                </p>
+              </div>
+              <div class="card-footer">
+                <span class="item-price">€15.00</span>
+                <span class="tag meat">MEAT</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="images/afelia.jpg" alt="Afelia" />
+
+              <div class="card-body">
+                <h4 class="card-name">Afelia</h4>
+                <p class="card-desc">
+                  Marinated pork cubes cooked in red wine and coriander seeds,
+                  served with seasonal vegetables and pourgouri.
+                </p>
+              </div>
+              <div class="card-footer">
+                <span class="item-price">€13.50</span>
+                <span class="tag meat">MEAT</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                src="images/fried-calamari-scaled.jpg"
+                alt="Fried Calamari"
+              />
+
+              <div class="card-body">
+                <h4 class="card-name">Fried Calamari</h4>
+                <p class="card-desc">
+                  Crispy fried calamari served with our signature marinara sauce
+                  and fresh herbs.
+                </p>
+              </div>
+              <div class="card-footer">
+                <span class="item-price">€16.00</span>
+                <span class="tag fish">FISH</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="images/grilled-octopus.png" alt="Grilled Octopus" />
+
+              <div class="card-body">
+                <h4 class="card-name">Grilled Octopus</h4>
+                <p class="card-desc">
+                  Grilled octopus served with our signature marinara sauce and
+                  fresh herbs.
+                </p>
+              </div>
+              <div class="card-footer">
+                <span class="item-price">€19.00</span>
+                <span class="tag fish">FISH</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="images/tsipoura.png" alt="Tsipoura fish" />
+
+              <div class="card-body">
+                <h4 class="card-name">Tsipoura</h4>
+                <p class="card-desc">
+                  Freshly grilled tsipoura fish served with seasonal vegetables
+                  and our signature sauce.
+                </p>
+              </div>
+              <div class="card-footer">
+                <span class="item-price">€17.00</span>
+                <span class="tag fish">FISH</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="images/louvi.jpg" alt="Louvi" />
+
+              <div class="card-body">
+                <h4 class="card-name">Louvi</h4>
+                <p class="card-desc">
+                  Traditional Cypriot dish made with black-eyed beans, olive
+                  oil, and fresh herbs.
+                </p>
+              </div>
+              <div class="card-footer">
+                <span class="item-price">€11.50</span>
+                <span class="tag veg">VEG</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="images/village-salad.png" alt="Village Salad" />
+
+              <div class="card-body">
+                <h4 class="card-name">Village Salad</h4>
+                <p class="card-desc">
+                  Village salad made with fresh tomatoes, cucumbers, onions,
+                  olives, and feta cheese, dressed with olive oil and herbs.
+                </p>
+              </div>
+              <div class="card-footer">
+                <span class="item-price">€10.00</span>
+                <span class="tag veg">VEG</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- KIDS MENU -->
+      <section class="menu-section" id="kids">
+        <div class="menu-section-header">
+          <div class="icon-section">
+            <i class="fa-solid fa-utensils" aria-hidden="true"></i>
+          </div>
+
+          <div class="text-section">
+            <h2>KIDS MENU</h2>
+            <p>For our little guests</p>
+          </div>
+        </div>
+
+        <span class="divider"></span>
+
+        <h3 class="subsection-title">KIDS DISHES</h3>
+        <div class="menu-items">
+          <div class="menu-grid">
+            <div class="card">
+              <img src="images/nuggets-and-chips.png" alt="Nuggets and Chips" />
+
+              <div class="card-body">
+                <h4 class="card-name">Nuggets and Chips</h4>
+                <p class="card-desc">
+                  Crispy chicken nuggets served with golden fries and ketchup.
+                </p>
+              </div>
+              <div class="card-footer">
+                <span class="item-price">€6.00</span>
+                <span class="tag meat">MEAT</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                src="images/calamari-and-fries.png"
+                alt="Calamari and Fries"
+              />
+
+              <div class="card-body">
+                <h4 class="card-name">Baby Calamari and Fries</h4>
+                <p class="card-desc">
+                  Crispy fried calamari served with golden fries and marinara
+                  sauce.
+                </p>
+              </div>
+              <div class="card-footer">
+                <span class="item-price">€7.50</span>
+                <span class="tag fish">FISH</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="images/mini-burger-meal.png" alt="Mini Burger" />
+
+              <div class="card-body">
+                <h4 class="card-name">Mini Burger Meal</h4>
+                <p class="card-desc">
+                  Three mini beef burgers served with golden fries and ketchup.
+                </p>
+              </div>
+              <div class="card-footer">
+                <span class="item-price">€8.50</span>
+                <span class="tag meat">MEAT</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="images/spaghetti.png" alt="Spaghetti" />
+
+              <div class="card-body">
+                <h4 class="card-name">Spaghetti</h4>
+                <p class="card-desc">
+                  Classic spaghetti with our signature marinara sauce and fresh
+                  herbs.
+                </p>
+              </div>
+              <div class="card-footer">
+                <span class="item-price">€6.50</span>
+                <span class="tag meat">MEAT</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DRINKS & SPIRITS -->
+      <section class="menu-section" id="drinks-spirits">
+        <div class="menu-section-header">
+          <div class="icon-section">
+            <i class="fa-solid fa-wine-glass" aria-hidden="true"></i>
+          </div>
+
+          <div class="text-section">
+            <h2>DRINKS & SPIRITS</h2>
+            <p>Enjoy our selection of traditional drinks and spirits</p>
+          </div>
+        </div>
+
+        <span class="divider"></span>
+
+        <!-- WINES -->
+        <h3 class="subsection-title">WINES</h3>
+        <div class="menu-items">
+          <div class="menu-grid">
+            <div class="card">
+              <img src="images/xynisteri.png" alt="Xynisteri" />
+
+              <div class="card-body">
+                <h4 class="card-name">Xynisteri</h4>
+                <p class="card-desc">
+                  A traditional Cypriot dry white wine with a rich flavor and
+                  smooth finish.
+                </p>
+              </div>
+              <div class="card-footer">
+                <span class="item-price">Glass €6 | Bottle €26</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="images/maratheftiko.jpg" alt="Maratheftiko" />
+
+              <div class="card-body">
+                <h4 class="card-name">Maratheftiko</h4>
+                <p class="card-desc">
+                  A traditional Cypriot red wine with a deep color and complex
+                  aroma.
+                </p>
+              </div>
+              <div class="card-footer">
+                <span class="item-price">€7 glass | €28 bottle</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="images/aphrodite-wine.png" alt="Aphrodite Wine" />
+
+              <div class="card-body">
+                <h4 class="card-name">Aphrodite</h4>
+                <p class="card-desc">
+                  A delightful Cypriot dry white wine with a unique flavor
+                  profile and elegant finish.
+                </p>
+              </div>
+              <div class="card-footer">
+                <span class="item-price">€6 glass | €24 bottle</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="images/commandaria-wine.png" alt="Commandaria Wine" />
+
+              <div class="card-body">
+                <h4 class="card-name">Commandaria</h4>
+                <p class="card-desc">
+                  One of the oldest wines in the world, Commandaria is a sweet
+                  dessert wine with a rich history and complex flavor profile.
+                  Recommended to be enjoyed with desserts or on its own as a
+                  special treat.
+                </p>
+              </div>
+              <div class="card-footer">
+                <span class="item-price">€7 · 60ml</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TRADITIONAL SPIRITS -->
+        <h3 class="subsection-title">TRADITIONAL SPIRITS</h3>
+        <div class="menu-items">
+          <div class="menu-grid">
+            <div class="card">
+              <img src="images/zivania.png" alt="Zivania" />
+              <div class="card-body">
+                <h4 class="card-name">Zivania</h4>
+                <p class="card-desc">
+                  Zivania is a traditional Cypriot spirit made from the
+                  distillation of grape pomace and local herbs. It has a strong
+                  clear flavor.
+                </p>
+              </div>
+              <div class="card-footer">
+                <span class="item-price">€5 · 50ml</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="images/fivekings.png" alt="Cypriot brandy" />
+              <div class="card-body">
+                <h4 class="card-name">Five Kings</h4>
+                <p class="card-desc">
+                  Five Kings is a premium Cypriot brandy with a smooth and rich
+                  flavor. It is aged in oak barrels for a unique taste and
+                  aroma.
+                </p>
+              </div>
+              <div class="card-footer">
+                <span class="item-price">€5 · 50ml</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="images/ouzo.png" alt="Ouzo" />
+              <div class="card-body">
+                <h4 class="card-name">Ouzo</h4>
+                <p class="card-desc">
+                  Ouzo is a traditional Greek and Cypriot anise-flavored spirit.
+                  It is often enjoyed as an aperitif or with meze dishes.
+                </p>
+              </div>
+              <div class="card-footer">
+                <span class="item-price">€12 · 200ml</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BEERS -->
+        <h3 class="subsection-title">BEERS</h3>
+        <div class="menu-items">
+          <div class="menu-grid">
+            <div class="card">
+              <img src="images/keo-beer.jpg" alt="Keo Beer" />
+              <div class="card-body">
+                <h4 class="card-name">KEO</h4>
+                <p class="card-desc">
+                  A popular Cypriot beer with a crisp and refreshing taste.
+                </p>
+              </div>
+              <div class="card-footer">
+                <span class="item-price">€3.50 · 330ml</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="images/carlsberg.png" alt="Carlsberg" />
+              <div class="card-body">
+                <h4 class="card-name">Carlsberg</h4>
+                <p class="card-desc">
+                  Carlsberg is a well-known international beer brand with a
+                  smooth and balanced flavor.
+                </p>
+              </div>
+              <div class="card-footer">
+                <span class="item-price">€3.50 · 330ml</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="images/leon-beer-single.jpg" alt="Leon Beer" />
+              <div class="card-body">
+                <h4 class="card-name">Leon</h4>
+                <p class="card-desc">
+                  Leon is a local Cypriot beer with a distinctive taste and
+                  aroma.
+                </p>
+              </div>
+              <div class="card-footer">
+                <span class="item-price">€3.50 · 330ml</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NON-ALCOHOLIC DRINKS -->
+        <h3 class="subsection-title">NON-ALCOHOLIC DRINKS</h3>
+        <div class="menu-items">
+          <div class="menu-grid">
+            <div class="card">
+              <img src="images/soft-drinks.jpg" alt="4 soft drinks" />
+              <div class="card-body">
+                <h4 class="card-name">Soft Drinks</h4>
+                <p class="card-desc">
+                  Different soft drinks including Coca-Cola, Fanta, Sprite and
+                  more. Zero sugar options are also available.
+                </p>
+              </div>
+              <div class="card-footer">
+                <span class="item-price">€3.00 · 330ml</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="images/orange-juice.jpg" alt="Orange Juice" />
+              <div class="card-body">
+                <h4 class="card-name">Orange Juice</h4>
+                <p class="card-desc">
+                  Freshly squeezed orange juice made from locally sourced
+                  oranges.
+                </p>
+              </div>
+              <div class="card-footer">
+                <span class="item-price">€3.50</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="images/soumada.jpg" alt="Soumada" />
+              <div class="card-body">
+                <h4 class="card-name">Soumada</h4>
+                <p class="card-desc">
+                  A traditional Cypriot non-alcoholic drink with a distinctive,
+                  refreshing flavor.
+                </p>
+              </div>
+              <div class="card-footer">
+                <span class="item-price">€3.50</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                src="images/greek-cypriot-coffee.jpg"
+                alt="Greek Cypriot Coffee"
+              />
+              <div class="card-body">
+                <h4 class="card-name">Cypriot Coffee</h4>
+                <p class="card-desc">
+                  A traditional Cypriot coffee with a strong and aromatic
+                  flavor. Usually served with a glass of water and biscuits.
+                </p>
+              </div>
+              <div class="card-footer">
+                <span class="item-price">€2.50</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
