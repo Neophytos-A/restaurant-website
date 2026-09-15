@@ -48,6 +48,9 @@ main {
 /* Menu Category Bar */
 
 .menu-category-section {
+  position: sticky;
+  top: 140px;
+  z-index: 900;
   background-color: #f5f1e8;
   text-align: center;
   padding: 1.5rem 2rem;
@@ -150,6 +153,8 @@ main {
 /* MENU SUBSECTIONS */
 
 .subsection-title {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   max-width: 1200px;
   font-family: "Cinzel", serif;
@@ -230,6 +235,11 @@ main {
   color: #8a8070;
 }
 
+.asterisk {
+  color: #c76b3c;
+  font-size: 1.2rem;
+}
+
 /* Dietary tags */
 .tag {
   font-size: 0.62rem;
@@ -238,6 +248,10 @@ main {
   padding: 0.35rem 0.6rem;
 
   border-radius: 4px 0 0 0;
+}
+
+.card-footer .tag {
+  margin-left: auto;
 }
 
 .tag.veg {

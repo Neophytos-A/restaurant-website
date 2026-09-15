@@ -10,6 +10,14 @@
   --color-white: #ffffff;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+@view-transition {
+  navigation: auto;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -306,6 +314,15 @@ nav a.active {
 
 .footer-container p {
   font-size: 1.2rem;
+}
+
+.footer-contact a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
 }
 
 .days,
