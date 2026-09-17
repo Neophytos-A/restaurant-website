@@ -469,6 +469,10 @@ nav a.active {
   color: #534b40;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 /* RESERVATION FORM */
 
 .reservation-form {
