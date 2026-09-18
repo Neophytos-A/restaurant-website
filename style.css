@@ -516,6 +516,17 @@ body.modal-open {
   resize: vertical;
 }
 
+.reservation-message {
+  display: none;
+  text-align: center;
+  font-weight: 600;
+  color: #3b6d11;
+}
+
+.reservation-message.active {
+  display: block;
+}
+
 .submit-reservation-button {
   margin-top: 0.5rem;
   padding: 1rem 2rem;
