@@ -424,16 +424,29 @@ nav a.active {
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  display: none;
+
+  display: flex;
   justify-content: center;
   align-items: center;
+
   padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease;
+
   z-index: 2000;
 }
 
 .modal-overlay.active {
-  display: flex;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .reservation-modal,
@@ -447,6 +460,19 @@ nav a.active {
   border-radius: 10px;
   padding: 2rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+  transform: translateY(20px) scale(0.96);
+  opacity: 0;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.modal-overlay.active .reservation-modal,
+.modal-overlay.active .job-application-modal {
+  transform: translateY(0) scale(1);
+  opacity: 1;
 }
 
 .modal-header {
@@ -540,19 +566,42 @@ body.modal-open {
   resize: vertical;
 }
 
-.reservation-message {
-  display: none;
-  text-align: center;
-  font-weight: 600;
-  color: #3b6d11;
+#application-cv {
+  width: 100%;
+  padding: 0.4rem;
+
+  font: inherit;
+  color: #534b40;
+
+  background-color: #ffffff;
+  border: 1px solid #bbb09a;
+  border-radius: 5px;
 }
 
-.reservation-message.active {
-  display: block;
+#application-cv::file-selector-button {
+  margin-right: 1rem;
+  padding: 0.7rem 1rem;
+
+  background-color: #f5f1e8;
+  color: #534b40;
+
+  border: 1px solid #bbb09a;
+  border-radius: 4px;
+
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+#application-cv::file-selector-button:hover {
+  background-color: #e8e2d6;
+  border-color: #c76b3c;
 }
 
 .submit-reservation-button,
 .submit-application-button {
+  width: 100%;
   margin-top: 0.5rem;
   padding: 1rem 2rem;
 
@@ -568,13 +617,55 @@ body.modal-open {
   transition: background-color 0.3s ease;
 }
 
-.submit-application-button {
-  width: 100%;
-}
-
 .submit-reservation-button:hover,
 .submit-application-button:hover {
   background-color: #a34f28;
+}
+
+.success-toast {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  max-width: 380px;
+  padding: 1rem 1.25rem;
+
+  background-color: #edf7e8;
+  color: #2f5f24;
+  border: 1px solid #b8d8aa;
+  border-left: 5px solid #4f8a3c;
+  border-radius: 8px;
+
+  font-weight: 600;
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(120%);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    visibility 0.3s ease;
+
+  z-index: 3000;
+}
+
+.success-toast.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.success-toast-icon {
+  color: #4f8a3c;
+  font-size: 1.4rem;
+  flex-shrink: 0;
 }
 
 /* MEDIA */

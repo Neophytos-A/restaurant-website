@@ -5,7 +5,6 @@ const reservationForm = document.getElementById("reservation-form");
 const reservationCloseButton = document.getElementById(
   "reservation-close-button",
 );
-const reservationMessage = document.getElementById("reservation-message");
 
 // DOM FOR APPLICATION MODAL
 const workWithUsButton = document.getElementById("work-btn");
@@ -14,7 +13,9 @@ const applicationForm = document.getElementById("application-form");
 const applicationCloseButton = document.getElementById(
   "application-close-button",
 );
-const applicationMessage = document.getElementById("application-message");
+
+const successToast = document.getElementById("success-toast");
+const successToastText = document.getElementById("success-toast-text");
 
 // FORM FIELDS RESERVATION
 const reservationNameInput = document.getElementById("reservation-name");
@@ -48,13 +49,28 @@ reservationDateInput.min = todayFormatted;
 // Prevent sunday reservations
 reservationDateInput.addEventListener("change", function () {
   const selectedDate = new Date(reservationDateInput.value);
+  const selectedDay = selectedDate.getDay();
 
-  if (selectedDate.getDay() === 0) {
+  if (selectedDay === 0) {
     reservationDateInput.setCustomValidity(
       "Reservations are not available on Sundays.",
     );
+
+    reservationTimeInput.disabled = true;
+    reservationTimeInput.value = "";
   } else {
-    reservationDateInput.setCustomValidity = "";
+    reservationDateInput.setCustomValidity("");
+
+    reservationTimeInput.disabled = false;
+    reservationTimeInput.min = "08:00";
+
+    if (selectedDay >= 1 && selectedDay <= 4) {
+      reservationTimeInput.max = "22:30";
+    } else {
+      reservationTimeInput.max = "23:30";
+    }
+
+    reservationTimeInput.value = "";
   }
 });
 
@@ -79,14 +95,14 @@ workWithUsButton.addEventListener("click", openApplicationModal);
 function closeReservationModal() {
   reservationModal.classList.remove("active");
   document.body.classList.remove("modal-open");
-  reservationMessage.textContent = "";
+
   bookTableButton.focus();
 }
 
 function closeApplicationModal() {
   applicationModal.classList.remove("active");
   document.body.classList.remove("modal-open");
-  applicationMessage.textContent = "";
+
   workWithUsButton.focus();
 }
 
@@ -96,14 +112,35 @@ reservationModal.addEventListener("click", function (event) {
   }
 });
 
+applicationModal.addEventListener("click", function (event) {
+  if (event.target === applicationModal) {
+    closeApplicationModal();
+  }
+});
+
 document.addEventListener("keydown", function (event) {
-  if (event.key === "Escape" && reservationModal.classList.contains("active")) {
+  if (event.key !== "Escape") return;
+
+  if (reservationModal.classList.contains("active")) {
     closeReservationModal();
+  }
+
+  if (applicationModal.classList.contains("active")) {
+    closeApplicationModal();
   }
 });
 
 reservationCloseButton.addEventListener("click", closeReservationModal);
 applicationCloseButton.addEventListener("click", closeApplicationModal);
+
+function showSuccessMessage(message) {
+  successToastText.textContent = message;
+  successToast.classList.add("active");
+
+  setTimeout(function () {
+    successToast.classList.remove("active");
+  }, 5000);
+}
 
 // Submit Reservation
 reservationForm.addEventListener("submit", function (event) {
@@ -130,12 +167,39 @@ reservationForm.addEventListener("submit", function (event) {
     requests,
   };
 
-  console.log(reservation);
-
-  reservationMessage.textContent =
-    "Reservation request submitted successfully!";
-
-  reservationMessage.classList.add("active");
-
   reservationForm.reset();
+  closeReservationModal();
+
+  showSuccessMessage("Reservation request submitted successfully!");
+});
+
+// Submit Application
+applicationForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  // Read values
+  const formData = new FormData(applicationForm);
+
+  const name = formData.get("name").trim();
+  const email = formData.get("email").trim();
+  const phone = formData.get("phone").trim();
+  const employmentType = formData.get("employment-type");
+  const position = formData.get("position");
+  const about = formData.get("about").trim();
+  const cv = formData.get("cv");
+
+  const application = {
+    name,
+    email,
+    phone,
+    employmentType,
+    position,
+    about,
+    cv,
+  };
+
+  applicationForm.reset();
+  closeApplicationModal();
+
+  showSuccessMessage("Application submitted successfully!");
 });

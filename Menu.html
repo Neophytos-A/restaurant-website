@@ -46,7 +46,9 @@
           <a href="#">ABOUT US</a>
         </div>
 
-        <a href="#" class="contact">BOOK A TABLE</a>
+        <button type="button" class="contact" id="book-table-button">
+          BOOK A TABLE
+        </button>
       </nav>
     </header>
     <main>
@@ -984,17 +986,19 @@
             <h3>Opening Hours</h3>
 
             <p>
-              <span class="days">Mon - Thu:</span> 19:00
+              <span class="days">Mon - Thu:</span> 08:00
               <span class="dash">–</span> 00:00
             </p>
             <p>
-              <span class="days">Fri - Sat:</span> 19:00
+              <span class="days">Fri - Sat:</span> 08:00
               <span class="dash">–</span> 01:00
             </p>
             <p><span class="days">Sun:</span> CLOSED</p>
           </div>
 
-          <a href="#" class="work-btn">WORK WITH US</a>
+          <button type="button" class="work-btn" id="work-btn">
+            WORK WITH US
+          </button>
 
           <address class="footer-contact" id="contact">
             <h3>Contact us</h3>
@@ -1116,7 +1120,13 @@
 
           <div class="form-group">
             <label for="reservation-time">Time</label>
-            <input type="time" id="reservation-time" name="time" required />
+            <input
+              type="time"
+              id="reservation-time"
+              name="time"
+              required
+              disabled
+            />
           </div>
 
           <div class="form-group">
@@ -1140,8 +1150,6 @@
             ></textarea>
           </div>
 
-          <p class="reservation-message" id="reservation-message"></p>
-
           <div class="form-actions">
             <button
               type="submit"
@@ -1153,6 +1161,143 @@
           </div>
         </form>
       </div>
+    </div>
+
+    <!-- JOB APPLICATION FORM -->
+
+    <div class="modal-overlay" id="job-application-modal">
+      <div
+        class="job-application-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="application-modal-title"
+      >
+        <form class="application-form" id="application-form">
+          <div class="modal-header">
+            <h2 id="application-modal-title">Work With Us</h2>
+
+            <button
+              type="button"
+              class="modal-close-button"
+              id="application-close-button"
+              aria-label="Close application form"
+            >
+              &times;
+            </button>
+          </div>
+
+          <div class="form-group">
+            <label for="application-name">Full Name</label>
+            <input
+              type="text"
+              id="application-name"
+              name="name"
+              autocomplete="name"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="application-email">Email</label>
+            <input
+              type="email"
+              id="application-email"
+              name="email"
+              autocomplete="email"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="application-phone">Phone</label>
+            <input
+              type="tel"
+              id="application-phone"
+              name="phone"
+              autocomplete="tel"
+              required
+            />
+          </div>
+
+          <fieldset>
+            <legend>Employment Type</legend>
+
+            <input
+              type="radio"
+              id="full-time"
+              name="employment-type"
+              value="full-time"
+              required
+            />
+            <label for="full-time">Full-time</label>
+
+            <input
+              type="radio"
+              id="part-time"
+              name="employment-type"
+              value="part-time"
+            />
+            <label for="part-time">Part-time</label>
+          </fieldset>
+
+          <div class="form-group">
+            <label for="application-position">Position</label>
+            <select id="application-position" name="position" required>
+              <option value="" disabled selected>Select a position</option>
+              <option value="waiter-waitress">Waiter / Waitress</option>
+              <option value="host-hostess">Host / Hostess</option>
+              <option value="bartender">Bartender</option>
+              <option value="busser-cleaner">Busser / Cleaner</option>
+              <option value="cook">Cook</option>
+              <option value="kitchen-porter-dishwasher">
+                Kitchen Porter / Dishwasher
+              </option>
+              <option value="head-chef-kitchen-manager">
+                Head Chef / Kitchen Manager
+              </option>
+              <option value="shift-supervisor">Shift Supervisor</option>
+              <option value="general-manager">General Manager</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="application-about">About Yourself (Optional)</label>
+            <textarea
+              id="application-about"
+              name="about"
+              placeholder=""
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="application-cv">Upload CV</label>
+            <input
+              type="file"
+              id="application-cv"
+              name="cv"
+              accept=".pdf,.doc,.docx"
+            />
+          </div>
+
+          <div class="form-actions">
+            <button
+              type="submit"
+              class="submit-application-button"
+              id="submit-application-button"
+            >
+              Submit Application
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="success-toast" id="success-toast">
+      <i
+        class="fa-solid fa-circle-check success-toast-icon"
+        aria-hidden="true"
+      ></i>
+      <span id="success-toast-text"></span>
     </div>
     <script src="script.js"></script>
   </body>
