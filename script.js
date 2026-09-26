@@ -14,6 +14,10 @@ const applicationCloseButton = document.getElementById(
   "application-close-button",
 );
 
+// DOM FOR MENU FILTERS
+const filterButtons = document.querySelectorAll(".filter-button");
+const menuCards = document.querySelectorAll(".card");
+
 const successToast = document.getElementById("success-toast");
 const successToastText = document.getElementById("success-toast-text");
 
@@ -202,4 +206,37 @@ applicationForm.addEventListener("submit", function (event) {
   closeApplicationModal();
 
   showSuccessMessage("Application submitted successfully!");
+});
+
+// Filter cards
+filterButtons.forEach(function (button) {
+  button.addEventListener("click", function () {
+    const selectedFilter = button.dataset.filter;
+
+    // Update active filter button
+    filterButtons.forEach(function (filterButton) {
+      filterButton.classList.remove("active");
+      filterButton.setAttribute("aria-pressed", "false");
+    });
+
+    button.classList.add("active");
+    button.setAttribute("aria-pressed", "true");
+
+    // Filter menu cards
+    menuCards.forEach(function (card) {
+      const isDrinkCard = card.closest("#drinks-spirits");
+
+      if (selectedFilter === "all" || isDrinkCard) {
+        card.style.display = "";
+      } else {
+        const matchingTag = card.querySelector(`.tag.${selectedFilter}`);
+
+        if (matchingTag) {
+          card.style.display = "";
+        } else {
+          card.style.display = "none";
+        }
+      }
+    });
+  });
 });

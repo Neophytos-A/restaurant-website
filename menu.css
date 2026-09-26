@@ -87,6 +87,78 @@ main {
   outline-offset: 4px;
 }
 
+/* MENU FILTERS */
+
+.menu-filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 1.5rem 2rem;
+  background-color: #ffffff;
+}
+
+.filter-button {
+  padding: 0.65rem 1.2rem;
+
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+
+  color: #6b8e23;
+  background-color: #ffffff;
+
+  border: 1px solid #6b8e23;
+  border-radius: 20px;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.filter-button:hover {
+  background-color: #f5f1e8;
+  transform: translateY(-2px);
+}
+
+/* ALL */
+.filter-button[data-filter="all"].active {
+  background-color: #8a8070;
+  border-color: #8a8070;
+  color: #ffffff;
+}
+
+/* VEG */
+.filter-button[data-filter="veg"].active {
+  background-color: #3b6d11;
+  border-color: #3b6d11;
+  color: #ffffff;
+}
+
+/* MEAT */
+.filter-button[data-filter="meat"].active {
+  background-color: #993c1d;
+  border-color: #993c1d;
+  color: #ffffff;
+}
+
+/* FISH */
+.filter-button[data-filter="fish"].active {
+  background-color: #185fa5;
+  border-color: #185fa5;
+  color: #ffffff;
+}
+
+.filter-button:focus-visible {
+  outline: 3px solid #c76b3c;
+  outline-offset: 3px;
+}
+
 /* MENU SECTIONS */
 
 .menu-section {
@@ -287,5 +359,16 @@ main {
 @media (max-width: 640px) {
   .menu-grid {
     grid-template-columns: 1fr;
+  }
+
+  .menu-filters {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+
+  .filter-button {
+    font-size: 0.8rem;
+    padding: 0.55rem 1rem;
   }
 }
