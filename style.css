@@ -140,6 +140,7 @@ h3,
   border: 2px solid #3d5412;
   border-radius: 5px;
   padding: 1rem;
+  cursor: pointer;
   transition: 0.3s ease;
 }
 
@@ -410,6 +411,7 @@ nav a.active {
   letter-spacing: 0.1rem;
   border: 2px solid var(--color-white);
   border-radius: 5px;
+  cursor: pointer;
   transition: 0.3s ease;
 }
 

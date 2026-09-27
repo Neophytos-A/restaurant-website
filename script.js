@@ -14,10 +14,13 @@ const applicationCloseButton = document.getElementById(
   "application-close-button",
 );
 
-// DOM FOR MENU FILTERS
+// DOM FOR MENU
+const menuSections = document.querySelectorAll(".menu-section");
+const menuCategoryLinks = document.querySelectorAll(".menu-category-nav a");
 const filterButtons = document.querySelectorAll(".filter-button");
 const menuCards = document.querySelectorAll(".card");
 
+// DOM FOR SUCCESS MESSAGES
 const successToast = document.getElementById("success-toast");
 const successToastText = document.getElementById("success-toast-text");
 
@@ -239,4 +242,35 @@ filterButtons.forEach(function (button) {
       }
     });
   });
+});
+
+// MENU SCROLL-SPY
+const observerOptions = {
+  root: null,
+  rootMargin: "-35% 0px -55% 0px",
+  threshold: 0,
+};
+
+const sectionObserver = new IntersectionObserver(function (entries) {
+  entries.forEach(function (entry) {
+    if (entry.isIntersecting) {
+      const sectionId = entry.target.id;
+
+      menuCategoryLinks.forEach(function (link) {
+        link.classList.remove("active");
+      });
+
+      const activeLink = document.querySelector(
+        `.menu-category-nav a[href="#${sectionId}"]`,
+      );
+
+      if (activeLink) {
+        activeLink.classList.add("active");
+      }
+    }
+  });
+}, observerOptions);
+
+menuSections.forEach(function (section) {
+  sectionObserver.observe(section);
 });
