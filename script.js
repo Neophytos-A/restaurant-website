@@ -19,6 +19,9 @@ const menuSections = document.querySelectorAll(".menu-section");
 const menuCategoryLinks = document.querySelectorAll(".menu-category-nav a");
 const filterButtons = document.querySelectorAll(".filter-button");
 const menuCards = document.querySelectorAll(".card");
+const mezeOffer = document.getElementById("meze-offer");
+const offerCloseButton = document.getElementById("offer-close-button");
+const offerWasShown = sessionStorage.getItem("mezeOfferShown");
 
 // DOM FOR SUCCESS MESSAGES
 const successToast = document.getElementById("success-toast");
@@ -273,4 +276,21 @@ const sectionObserver = new IntersectionObserver(function (entries) {
 
 menuSections.forEach(function (section) {
   sectionObserver.observe(section);
+});
+
+// MEZE OFFER
+if (!offerWasShown) {
+  setTimeout(function () {
+    mezeOffer.classList.add("active");
+
+    sessionStorage.setItem("mezeOfferShown", "true");
+
+    setTimeout(function () {
+      mezeOffer.classList.remove("active");
+    }, 7000);
+  }, 2000);
+}
+
+offerCloseButton.addEventListener("click", function () {
+  mezeOffer.classList.remove("active");
 });

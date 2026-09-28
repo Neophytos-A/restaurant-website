@@ -313,6 +313,112 @@ main {
   font-size: 1.2rem;
 }
 
+/* Meze special offer */
+
+.meze-offer {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+
+  width: min(360px, calc(100% - 2rem));
+  padding: 1.4rem;
+
+  background-color: #fffaf0;
+  color: #3f3a32;
+
+  border: 1px solid #d9cbb5;
+  border-left: 5px solid #b55d35;
+  border-radius: 10px;
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+
+  z-index: 1500;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(120%);
+
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease,
+    visibility 0.35s;
+}
+
+.meze-offer.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.meze-offer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 1rem;
+}
+
+.meze-offer-header h3 {
+  margin: 0;
+  font-family: "Cinzel", serif;
+  font-size: 1.2rem;
+  color: #6b7a3d;
+}
+
+.meze-offer .modal-close-button {
+  padding: 0;
+
+  color: #6b6257;
+  background: transparent;
+  border: none;
+
+  font-size: 1.6rem;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.meze-offer .modal-close-button:hover {
+  color: #b55d35;
+  transform: scale(1.1);
+}
+
+.offer-text {
+  margin: 0 0 1rem;
+
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.offer-price {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  margin: 0;
+}
+
+.old-price {
+  color: #777;
+  font-size: 1rem;
+  text-decoration: line-through;
+}
+
+.arrow {
+  color: #777;
+}
+
+.new-price {
+  color: #b55d35;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
 /* Dietary tags */
 .tag {
   font-size: 0.62rem;
@@ -371,5 +477,13 @@ main {
   .filter-button {
     font-size: 0.8rem;
     padding: 0.55rem 1rem;
+  }
+
+  .meze-offer {
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+
+    width: auto;
   }
 }
