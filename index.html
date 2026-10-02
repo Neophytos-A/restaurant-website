@@ -8,12 +8,12 @@
       content="Olive & Oregano is a Cypriot restaurant that offers authentic Cypriot cuisine, fresh ingredients, and traditional recipes. Join us for great food, great wine, and great company."
     />
     <title>Olive & Oregano | Cypriot Cuisine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
@@ -41,14 +41,43 @@
           <span class="oregano-color">Oregano</span>
         </a>
 
+        <!-- Hamburger button for mobile navigation -->
+        <button
+          type="button"
+          class="hamburger-button"
+          id="hamburger-button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+
         <div class="navbar-right">
-          <a href="#">GALLERY</a>
-          <a href="#">ABOUT US</a>
+          <a>GALLERY</a>
+          <a>ABOUT US</a>
         </div>
 
-        <button type="button" class="contact" id="book-table-button">
+        <button type="button" class="book-table-btn" id="book-table-button">
           BOOK A TABLE
         </button>
+
+        <!-- Mobile menu for smaller screens -->
+        <div class="mobile-menu" id="mobile-menu">
+          <a href="index.html" aria-current="page">HOME</a>
+          <a href="menu.html">MENU</a>
+          <a href="#contact">CONTACT</a>
+          <a href="#">GALLERY</a>
+          <a href="#">ABOUT US</a>
+
+          <button
+            type="button"
+            class="mobile-book-table-btn"
+            id="mobile-book-table-button"
+          >
+            BOOK A TABLE
+          </button>
+        </div>
       </nav>
     </header>
     <main>
@@ -85,7 +114,7 @@
           Discover the rich flavors of Cypriot wine, crafted with tradition and
           passion.
         </p>
-        <a href="#" class="btn">VIEW OUR WINES</a>
+        <a href="menu.html#drinks-spirits" class="btn">VIEW OUR WINES</a>
       </section>
     </main>
 
@@ -94,7 +123,7 @@
     <footer class="footer">
       <div class="footer-about">
         <h3>Olive & Oregano</h3>
-        <p>JOIN US FOR GREAT FOOD GREAT WINE AND GREAT COMPANY</p>
+        <p>JOIN US FOR GREAT FOOD, GREAT WINE AND GREAT COMPANY</p>
       </div>
 
       <div class="footer-container">
@@ -102,14 +131,19 @@
           <h3>Opening Hours</h3>
 
           <p>
-            <span class="days">Mon - Thu:</span> 08:00
-            <span class="dash">–</span> 00:00
+            <span class="days">Mon - Thu:</span>
+            <span class="hours">08:00 – 00:00</span>
           </p>
+
           <p>
-            <span class="days">Fri - Sat:</span> 08:00
-            <span class="dash">–</span> 01:00
+            <span class="days">Fri - Sat:</span>
+            <span class="hours">08:00 – 01:00</span>
           </p>
-          <p><span class="days">Sun:</span> CLOSED</p>
+
+          <p>
+            <span class="days">Sun:</span>
+            <span class="hours">CLOSED</span>
+          </p>
         </div>
 
         <button type="button" class="work-btn" id="work-btn">
@@ -151,16 +185,16 @@
       <div class="footer-socials">
         <h3>Find Us</h3>
 
-        <i class="fa-solid fa-arrow-right arrow"></i>
+        <i class="fa-solid fa-arrow-right footer-arrow"></i>
 
         <div class="social-logos">
-          <a href="#" aria-label="Facebook">
+          <a aria-label="Facebook">
             <img class="socials-img" src="icons/facebook.svg" alt="" />
           </a>
-          <a href="#" aria-label="Instagram">
+          <a aria-label="Instagram">
             <img class="socials-img" src="icons/instagram.svg" alt="" />
           </a>
-          <a href="#" aria-label="TikTok">
+          <a aria-label="TikTok">
             <img class="socials-img" src="icons/tiktok.svg" alt="" />
           </a>
         </div>
@@ -178,7 +212,7 @@
       >
         <form class="reservation-form" id="reservation-form">
           <div class="modal-header">
-            <h2 id="reservation-modal-title">Make Reservation</h2>
+            <h2 id="reservation-modal-title">Make a Reservation</h2>
 
             <button
               type="button"
@@ -380,12 +414,12 @@
             <textarea
               id="application-about"
               name="about"
-              placeholder=""
+              placeholder="Tell us a little about yourself..."
             ></textarea>
           </div>
 
           <div class="form-group">
-            <label for="application-cv">Upload CV</label>
+            <label for="application-cv">Upload CV (Optional)</label>
             <input
               type="file"
               id="application-cv"
@@ -407,7 +441,12 @@
       </div>
     </div>
 
-    <div class="success-toast" id="success-toast">
+    <div
+      class="success-toast"
+      id="success-toast"
+      role="status"
+      aria-live="polite"
+    >
       <i
         class="fa-solid fa-circle-check success-toast-icon"
         aria-hidden="true"
