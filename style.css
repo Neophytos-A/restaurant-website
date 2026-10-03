@@ -803,6 +803,9 @@ body.modal-open {
 
   .footer-contact {
     width: min(100%, 360px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .footer-contact h3 {
@@ -895,8 +898,32 @@ body.modal-open {
     padding: 1.5rem;
   }
 
+  .success-toast {
+    left: 50%;
+    right: auto;
+    bottom: 1rem;
+
+    width: calc(100% - 2rem);
+    max-width: 380px;
+
+    transform: translateX(100vw);
+  }
+
+  .success-toast.active {
+    transform: translateX(-50%);
+  }
+
   .hamburger-button {
     font-size: 1.6rem;
+  }
+
+  .footer-contact p {
+    font-size: 1rem;
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: center;
   }
 }
 
