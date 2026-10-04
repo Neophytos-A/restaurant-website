@@ -96,10 +96,10 @@ main {
   font-weight: 600;
   letter-spacing: 0.08em;
 
-  color: #534b40;
+  color: var(--color-text);
   background-color: var(--color-white);
 
-  border: 1px solid #bbb09a;
+  border: 1px solid var(--color-border);
   border-radius: 20px;
 
   cursor: pointer;
@@ -204,7 +204,7 @@ main {
 .text-section h2 {
   font-size: 1.2rem;
   font-family: "Cinzel", serif;
-  color: #534b40;
+  color: var(--color-text);
 }
 
 .text-section p {
@@ -463,20 +463,11 @@ main {
   .menu-category-section {
     top: 110px;
   }
-
-  .header {
-    padding: 1rem 1.5rem;
-  }
 }
 
 @media (max-width: 640px) {
   .header {
     padding: 0.75rem 1rem;
-  }
-
-  .logo {
-    font-size: 1.6rem;
-    padding: 0.5rem;
   }
 
   main {
