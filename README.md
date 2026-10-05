@@ -163,7 +163,7 @@ The project includes several accessibility improvements:
 1. Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone <https://github.com/Neophytos-A/restaurant-website>
 ```
 
 2. Open the project folder.
@@ -174,15 +174,19 @@ You can also use an extension such as **Live Server** in Visual Studio Code.
 
 ## Screenshots
 
-Screenshots will be added after the final deployed version is completed.
+### Home Page
 
-### Desktop
+![Olive & Oregano home page](screenshots/home-desktop.png)
 
-`Coming soon`
+### Menu Page
 
-### Mobile
+![Olive & Oregano menu page](screenshots/menu-desktop.png)
 
-`Coming soon`
+### Mobile View
+
+![Olive & Oregano mobile home page](screenshots/home-mobile.png)
+
+![Olive & Oregano mobile menu page](screenshots/menu-mobile.png)
 
 ## Live Demo
 
